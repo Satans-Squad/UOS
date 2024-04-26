@@ -1,0 +1,14 @@
+#!/bin/bash
+
+# Define the IP address or hostname to ping
+target="google.com"
+
+# Ping the target with only one packet
+ping -c 5 -q "$target"
+
+# Check the exit status of the ping command
+if [ $? -eq 0 ]; then
+    echo "$target is reachable."
+else
+    echo "$target is not reachable."
+fi
